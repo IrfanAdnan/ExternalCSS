@@ -1,0 +1,51 @@
+body,h1,h2,h3,h4,h5 {
+	font-family: "Poppins", sans-serif}
+body {
+	font-size:16px;}
+.w3-half img{
+	margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{
+	opacity:1}
+table, th, td {
+  border: 2px solid black;
+  
+  ul {
+  list-style-type: none;
+  margin: 340px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: none;
+  color: white;
+  text-align: center;
+  padding: 2px 3px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
